@@ -1,0 +1,37 @@
+.button {
+    background-color: transparent;
+    border: none;
+    font-family: $font-first;
+    letter-spacing: 1px;
+    border-radius: 3px;
+
+    &--green {
+        width: 240px;
+        height: 42px;
+        font-weight: $fw-bold;
+        background-color: nth($green, 1);
+        color: $white;
+    }
+
+    &--gray-circle {
+        display: block;
+        padding: 8px;
+        padding-left: 10px;
+        border: 2px nth($gray, 1) solid;
+        border-radius: 50%;
+        text-align: center;
+        color: nth($gray, 1);
+    }
+
+
+
+    &__text {
+        &--forRobots {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+
+    }
+}

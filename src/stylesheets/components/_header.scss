@@ -1,0 +1,51 @@
+.header {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 60px;
+    overflow: hidden;
+    text-align: center;
+    color: $white;
+
+    &__baner {
+        position: absolute;
+        width: 100%;
+        min-height: 100vh;
+        left: 0%;
+        top: 0%;
+        z-index: -1;
+
+        &-image {
+            position: absolute;
+            max-height: 100%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__title {
+        font-size: map-get($fs, s);
+        font-weight: $fw-bold;
+        font-family: $font-first;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    &__headline {}
+
+    &__paragraph {
+        margin: 20px;
+        font-family: $font-first;
+        letter-spacing: 0.2px;
+    }
+
+    &__button-wrapper {
+        padding: 13px;
+    }
+
+    &__button {
+        display: block;
+        margin: 10px auto;
+    }
+}

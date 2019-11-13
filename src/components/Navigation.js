@@ -9,6 +9,7 @@ class Navigation {
         
         // Hamburger
         this.button.addEventListener('click', this.toggleActive)
+        window.addEventListener('scroll', this.scrolling);
     }
     toggleActive = () => {
         // toggle list
@@ -19,6 +20,9 @@ class Navigation {
         // toggle button-icon
         this.buttonIcon.classList.toggle('fa-bars')
         this.buttonIcon.classList.toggle('fa-times')
+    }
+    scrolling = (e) => {
+        console.log(e)
     }
 }
 
