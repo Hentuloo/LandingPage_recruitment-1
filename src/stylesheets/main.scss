@@ -1,12 +1,8 @@
-@import "variables";
-@import "reset";
-@import "fonts";
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
+@import './settings/variables';
+@import './settings/mixins';
+@import './settings/reset';
+@import './settings/topography';
+@import './settings/fonts';
 
 html {
   font-size: 62.5%;

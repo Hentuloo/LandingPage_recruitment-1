@@ -1,0 +1,34 @@
+button {
+  font-size: map-get($fs, s);
+  line-height: 18px;
+}
+
+p {
+  font-size: map-get($fs, xs);
+  line-height: 22px;
+}
+
+h5 {
+  font-size: map-get($fs, s);
+  line-height: 16px;
+}
+
+h4 {
+  font-size: map-get($fs, s);
+  line-height: 20px;
+}
+
+h3 {
+  font-size: map-get($fs, xl);
+  line-height: 28px;
+}
+
+h2 {
+  font-size: map-get($fs, xxl);
+  line-height: 38px;
+}
+
+h1 {
+  font-size: map-get($fs, xxxl);
+  line-height: 38px;
+}
