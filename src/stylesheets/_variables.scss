@@ -1,0 +1,28 @@
+  $fs:(xxs:0.9rem,
+      xs:1rem,
+      s: 1.6rem,
+      m:1.2rem,
+      l:1.4rem,
+      xl:1.6rem,
+  );
+
+  $fw-bold:700;
+  $fw-medium:500;
+  $fw-regular:400;
+
+  $breakpoints:(mobile:'(min-width: 460px)',
+      tablet:'(min-width: 800px)',
+      desktop:'(min-width:1024px)',
+      large:'(min-width:1200px)',
+      xlarge:'(min-width:1400px)',
+  );
+  //base-colors
+  $white: #ffffff;
+  $black: #000000;
+
+  $green:(rgba(63, 174, 73, 1));
+  $blue:(rgba(30, 48, 102, 1));
+  $gray:(rgba(216, 216, 216, 1), rgba(245, 245, 245, 1));
+
+  $font-first: 'Raleway';
+  $font-second: 'Millunium Medium'

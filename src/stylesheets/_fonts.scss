@@ -1,0 +1,23 @@
+@font-face {
+    font-family: $font-second;
+    src: url('../assets/fonts/MilluniumMedium/Millunium-Medium.eot');
+    src: url('../assets/fonts/MilluniumMedium/Millunium-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/MilluniumMedium/Millunium-Medium.woff2') format('woff2'),
+        url('../assets/fonts/MilluniumMedium/Millunium-Medium.woff') format('woff'),
+        url('../assets/fonts/MilluniumMedium/Millunium-Medium.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: $font-first;
+    src: url('../assets/fonts/Raleway/Raleway-Bold.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: $font-first;
+    src: url('../assets/fonts/Raleway/Raleway-Medium.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: $font-first;
+    src: url('../assets/fonts/Raleway/Raleway-Regular.ttf') format('truetype'),
+}

@@ -1,3 +1,24 @@
+@import "variables";
+@import "reset";
+@import "fonts";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: gray;
+  font-size: 1.6rem;
+  font-weight: $fw-bold;
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+  letter-spacing: 1px;
+  overflow-x: hidden;
+  font-family: $font-second;
 }

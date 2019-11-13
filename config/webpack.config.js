@@ -2,6 +2,7 @@ const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -12,6 +13,18 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[folder]/[name].[ext]",
+              outputPath: "assets"
+            }
+          }
+        ]
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       }
@@ -19,9 +32,11 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html"
+    }),
     new MiniCssExtractPlugin({
-      filename: "stylesheets/[name]-[contenthash:6].css"
+      filename: "[name]-[contenthash:6].css"
     })
   ],
   devServer: {
