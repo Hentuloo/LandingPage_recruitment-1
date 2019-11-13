@@ -18,7 +18,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "[folder]/[name].[ext]",
+              name: "fonts/[folder]/[name].[ext]",
               outputPath: "assets"
             }
           }
@@ -27,7 +27,18 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
-      }
+      },
+      {
+            test: /\.m?js$/,
+            exclude: /(node_modules|bower_components)/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                  presets: ['@babel/preset-env'],
+                  plugins:["@babel/plugin-proposal-class-properties"]
+                }
+            }
+        }
     ]
   },
   plugins: [
@@ -37,7 +48,8 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "[name]-[contenthash:6].css"
-    })
+    }),
+    new CopyPlugin([{from:'src/assets',to:'assets'}]),
   ],
   devServer: {
     open: true

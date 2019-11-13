@@ -1,20 +1,25 @@
+//import config files
 @import './settings/variables';
 @import './settings/mixins';
 @import './settings/reset';
 @import './settings/topography';
 @import './settings/fonts';
 
+//base styles for body
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-size: 1.6rem;
-  font-weight: $fw-bold;
-  background-color: white;
+  min-height: 100vh;
   margin: 0px;
   padding: 0px;
-  letter-spacing: 1px;
   overflow-x: hidden;
   font-family: $font-second;
+  font-weight: $fw-bold;
+  font-size: map-get($fs, s);
+  background-color: white;
 }
+
+//import all components
+@import './components/index';

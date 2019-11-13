@@ -1,3 +1,10 @@
 {
-  "extends": ["eslint:recommended", "airbnb", "prettier"]
+  "extends": ["eslint:recommended", "airbnb", "prettier"],
+  "globals": {
+    "document": true,
+    "window": true
+  },
+  "rules": {
+    "no-new": 0
+  }
 }
