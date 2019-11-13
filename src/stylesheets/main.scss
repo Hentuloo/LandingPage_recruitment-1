@@ -18,7 +18,7 @@ body {
   font-family: $font-second;
   font-weight: $fw-bold;
   font-size: map-get($fs, s);
-  background-color: white;
+  background-color: nth($gray, 2);
 }
 
 //import all components

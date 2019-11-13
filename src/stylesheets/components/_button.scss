@@ -6,11 +6,9 @@
     border-radius: 3px;
 
     &--green {
-        width: 240px;
-        height: 42px;
         font-weight: $fw-bold;
         background-color: nth($green, 1);
-        color: $white;
+        color: nth($white, 1);
     }
 
     &--gray-circle {

@@ -10,7 +10,7 @@
   z-index: 10;
   font-size: map-get($fs, xl);
   font-family: $font-first;
-  color: $white;
+  color: nth($white, 1);
 
   &--scrolled {
     background-color: nth($blue, 1);
@@ -32,7 +32,7 @@
   &__button {
     justify-self: end;
     padding: 6px 14px;
-    color: $white;
+    color: nth($white, 1);
     cursor: pointer;
     z-index: 11;
 
@@ -55,7 +55,7 @@
     &::after {
       content: '';
       position: absolute;
-      background-color: rgba(0, 0, 0, 0.705);
+      background-color: nth($black, 3);
       width: 100%;
       height: 100vh;
       top: 0%;

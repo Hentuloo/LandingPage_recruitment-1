@@ -1,0 +1,30 @@
+.statistic {
+    background-color: nth($green, 1);
+    color: nth($white, 1);
+    padding: 30px;
+
+    text-align: center;
+
+    &__title {
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-family: $font-first;
+        font-weight: $fw-bold;
+        margin-bottom: 15px;
+    }
+
+    &__group {
+        display: grid;
+        margin: 10px auto;
+    }
+
+    &__number {
+        font-size: map-get($fs, xxxl);
+        font-weight: $fw-medium;
+    }
+
+    &__paragraph {
+        font-family: $font-first;
+        font-weight: $fw-bold;
+    }
+}
