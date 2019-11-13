@@ -1,0 +1,40 @@
+.awards {
+    text-align: center;
+    padding: 10px 30px;
+    margin-bottom: 40px;
+
+    &__title {}
+
+    &__headline {}
+
+    &__groups {}
+
+    &__group {
+        margin: 25px auto;
+
+        &--active {
+            .awards__hash {
+                color: nth($green, 1);
+            }
+        }
+    }
+
+    &__group-text {
+        max-width: 100px;
+        font-size: map-get($fs, s);
+        font-weight: $fw-bold;
+        color: nth($black, 4);
+        margin: 0px auto;
+    }
+
+    &__image-wrapper {
+        margin: 5px 10px;
+    }
+
+    &__image {}
+
+    &__hash {
+        font-size: map-get($fs, xxxl);
+        font-weight: $fw-medium;
+    }
+}

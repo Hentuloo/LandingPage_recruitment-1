@@ -1,32 +1,13 @@
 .about {
-    &__information {
-        position: relative;
-        display: block;
-        box-sizing: border-box;
-        width: 94%;
-        margin: 20px auto 0px;
-        padding: 15px;
-        background-color: nth($white, 1);
-        z-index: 5;
-    }
+    &__information {}
 
     &__headline {
-        margin-top: 10px;
-        font-size: map-get($fs, s);
-        font-weight: $fw-bold;
-        font-family: $font-first;
-        letter-spacing: 2px;
-        color: nth($black, 2)
+        margin-bottom: 20px;
     }
 
-    &__title {
-        margin-bottom: 25px;
-    }
+    &__title {}
 
-    &__paragraph {
-        font-family: $font-first;
-        color: nth($black, 4)
-    }
+    &__paragraph {}
 
     &__button {
         display: block;

@@ -1,0 +1,50 @@
+.comment {
+    position: relative;
+    padding: 70px 15px 15px;
+    transform: translateY(-30px);
+    background-color: nth($green, 1);
+    color: nth($white, 1);
+
+    &__paragraph {}
+
+    &__quote-icon {
+        position: absolute;
+        top: 55px;
+        right: 20px;
+        font-size: 88px;
+        z-index: -1;
+        color: nth($white, 2);
+    }
+
+    &__person {
+        display: grid;
+        grid-template-columns: 48px 1fr;
+        grid-template-rows: auto auto;
+        margin: 25px auto 20px
+    }
+
+    &__imge-wrapper {
+        grid-row: 1/-1;
+        grid-column: 1;
+    }
+
+    &__image {
+        max-width: 100%;
+        border-radius: 50%;
+        background-color: nth($white, 1);
+    }
+
+    &__name {
+        grid-column: 2;
+        align-self: flex-end;
+        padding-left: 10px;
+        font-family: $font-first;
+        font-weight: $fw-bold;
+    }
+
+    &__description {
+        grid-column: 2;
+        padding-left: 10px;
+        font-family: $font-first;
+    }
+}

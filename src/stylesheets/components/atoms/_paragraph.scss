@@ -1,0 +1,8 @@
+.paragraph {
+    font-family: $font-first;
+    color: nth($black, 4);
+
+    &--white {
+        color: nth($white, 1);
+    }
+}

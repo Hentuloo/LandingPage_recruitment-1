@@ -1,5 +1,11 @@
-@import 'button';
+// import atoms
+@import './atoms/index';
+
+
 @import 'nav';
 @import 'header';
 @import 'about';
 @import 'statistic';
+@import 'awards';
+@import 'join';
+@import 'comment';

@@ -1,0 +1,18 @@
+.join {
+
+    &__title {}
+
+    &__headline {}
+
+    &__paragraph {
+        margin-top: 20px;
+
+    }
+
+    &__button {
+        display: block;
+        height: 42px;
+        width: 100%;
+        margin: 10px auto;
+    }
+}

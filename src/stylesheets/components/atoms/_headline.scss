@@ -1,0 +1,10 @@
+.headline {
+    &--second {
+        font-size: map-get($fs, s);
+        letter-spacing: 2px;
+        font-weight: $fw-bold;
+        font-family: $font-first;
+        text-transform:uppercase;
+        color: nth($black, 2);
+    }
+}
