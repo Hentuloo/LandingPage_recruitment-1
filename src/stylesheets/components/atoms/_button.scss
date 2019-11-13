@@ -1,9 +1,13 @@
 .button {
+    display: block;
+    height: 42px;
+    width: 100%;
     background-color: transparent;
     border: none;
     font-family: $font-first;
     letter-spacing: 1px;
     border-radius: 3px;
+    
 
     &--green {
         font-weight: $fw-bold;

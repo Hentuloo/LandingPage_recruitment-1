@@ -2,8 +2,10 @@
     position: relative;
     padding: 70px 15px 15px;
     transform: translateY(-30px);
+    margin-bottom: -30px;
     background-color: nth($green, 1);
     color: nth($white, 1);
+
 
     &__paragraph {}
 

@@ -2,7 +2,6 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-
     overflow: hidden;
     text-align: center;
     color: nth($white, 1);
@@ -41,20 +40,19 @@
         letter-spacing: 0.2px;
     }
 
-
-
     &__button-invide {
         width: 240px;
         height: 42px;
         margin: 10px auto;
     }
 
-    &___button-arrow {
-        padding: 13px;
+    &__button-arrow {
+        padding: 7px 0px;
     }
 
     &__button-arrow-element {
         display: block;
-        margin: 10px auto;
+        width: auto;
+        margin: 0px auto;
     }
 }

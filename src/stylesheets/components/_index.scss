@@ -1,11 +1,15 @@
 // import atoms
 @import './atoms/index';
+// import molecules
+@import './molecules/index';
+// import organisms
+@import './organisms/index';
 
 
-@import 'nav';
 @import 'header';
 @import 'about';
 @import 'statistic';
 @import 'awards';
 @import 'join';
 @import 'comment';
+@import 'contact';

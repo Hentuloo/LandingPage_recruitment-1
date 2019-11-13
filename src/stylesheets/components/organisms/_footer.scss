@@ -1,0 +1,10 @@
+.footer {
+    display: grid;
+    height: 87px;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-first;
+    font-weight: $fw-medium;
+    background-color: nth($blue, 1);
+    color: nth($white, 1)
+}

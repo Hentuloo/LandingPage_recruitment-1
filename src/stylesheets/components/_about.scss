@@ -10,14 +10,12 @@
     &__paragraph {}
 
     &__button {
-        display: block;
-        height: 42px;
-        width: 100%;
         margin: 20px auto 15px;
     }
 
     &__image-wrapper {
         transform: translateY(-30px);
+        margin-bottom: -30px;
     }
 
     &__image {
@@ -25,7 +23,5 @@
         max-width: 100%;
     }
 
-    &__statistic {
-        transform: translateY(-30px);
-    }
+    &__statistic {}
 }

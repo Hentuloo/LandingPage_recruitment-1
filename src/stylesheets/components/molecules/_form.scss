@@ -1,0 +1,30 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    color: nth($black, 2);
+
+    &__input {
+        border: none;
+        border-bottom: 1px solid nth($black, 5);
+        padding: 11px 0px;
+        margin: 7px 0px;
+        font-family: $font-first;
+
+        &::placeholder {
+            color: nth($black, 2);
+        }
+    }
+
+    &__textarea {
+        min-height: 110px;
+        padding: 20px;
+        background-color: nth($gray, 3);
+        border: 1px solid nth($black, 5);
+        font-family: $font-first;
+        margin: 7px;
+    }
+
+    &__button {
+        margin: 7px auto 15px;
+    }
+}

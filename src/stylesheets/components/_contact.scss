@@ -1,0 +1,22 @@
+.contact {
+    background-color: nth($white, 1);
+
+    &__image-wrapper {}
+
+    &__image {
+        display: block;
+        max-width: 100%;
+    }
+
+    &__form-group {
+        padding: 14px;
+    }
+
+    &__title {}
+
+    &__headline {
+        margin-bottom: 30px;
+    }
+
+    &__form {}
+}
