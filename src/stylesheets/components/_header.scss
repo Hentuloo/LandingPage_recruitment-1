@@ -1,10 +1,18 @@
 .header {
     position: relative;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     min-height: 100vh;
+    padding-top: 60px;
     overflow: hidden;
     text-align: center;
     color: nth($white, 1);
+    box-sizing: border-box;
+
+    @include mq(tablet) {
+        padding-top: 24vh;
+    }
 
     &__baner {
         position: absolute;
@@ -24,35 +32,65 @@
     }
 
     &__title {
-        margin-top: 60px;
         font-size: map-get($fs, s);
         font-weight: $fw-bold;
         font-family: $font-first;
         text-transform: uppercase;
         letter-spacing: 3px;
+
+        @include mq(tablet) {
+            font-size: map-get($fs, xs);
+        }
     }
 
-    &__headline {}
+    &__headline {
+        @include mq(tablet) {
+            word-spacing: 6px;
+            margin: 15px 0px 25px;
+        }
+    }
 
     &__paragraph {
         margin: 20px;
         font-family: $font-first;
         letter-spacing: 0.2px;
+
+        @include mq(tablet) {
+            letter-spacing: 0.5px;
+            line-height: 34px;
+        }
     }
 
     &__button-invide {
         width: 240px;
         height: 42px;
         margin: 10px auto;
+
+        @include mq(tablet) {
+            width: auto;
+            height: auto;
+            padding: 20px 85px;
+            margin: 20px auto;
+        }
     }
 
     &__button-arrow {
+        margin-top: auto;
+        margin-bottom: 18px;
         padding: 7px 0px;
+
+        @include mq(tablet) {
+            margin-bottom: 40px;
+        }
     }
 
     &__button-arrow-element {
         display: block;
         width: auto;
         margin: 0px auto;
+
+        @include mq(tablet) {
+            font-size: map-get($fs, xs);
+        }
     }
 }

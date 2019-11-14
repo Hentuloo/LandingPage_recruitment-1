@@ -1,19 +1,20 @@
-$fs: (xxs: 0.9rem,
-  xs: 1.4rem,
-  s: 1.5rem,
-  m: 1.8rem,
-  l: 2.1rem,
-  xl: 2.4rem,
-  xxl: 3.2rem,
-  xxxl: 3.8rem,
+$fs: (xxs: 0.9em,
+  xs: 1.4em,
+  s: 1.5em,
+  m: 1.8em,
+  l: 2.1em,
+  xl: 2.4em,
+  xxl: 3.2em,
+  xxxl: 3.8em,
 );
+
 
 $fw-bold: 700;
 $fw-medium: 500;
 $fw-regular: 400;
 
 $breakPoints: (mobile: '(min-width: 460px)',
-  tablet: '(min-width: 400px)',
+  tablet: '(min-width: 670px)',
   desktop: '(min-width:1024px)',
   large: '(min-width:1200px)',
   xlarge: '(min-width:1400px)',

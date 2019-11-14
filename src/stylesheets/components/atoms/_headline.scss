@@ -1,10 +1,14 @@
 .headline {
+    @include mq(tablet) {
+        line-height: 40px;
+    }
+
     &--second {
         font-size: map-get($fs, s);
         letter-spacing: 2px;
         font-weight: $fw-bold;
         font-family: $font-first;
-        text-transform:uppercase;
+        text-transform: uppercase;
         color: nth($black, 2);
     }
 }

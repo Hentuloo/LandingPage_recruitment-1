@@ -2,6 +2,11 @@
     text-align: center;
     padding: 10px 30px;
     margin-bottom: 40px;
+    background-color: nth($white, 1);
+
+    @include mq(tablet) {
+        padding: 240px 30px;
+    }
 
     &__title {}
 

@@ -7,7 +7,15 @@
     font-family: $font-first;
     letter-spacing: 1px;
     border-radius: 3px;
-    
+    cursor: pointer;
+
+    @include mq(tablet) {
+        font-size: map-get($fs, xs);
+        width: auto;
+        height: auto;
+        padding: 20px 35px;
+    }
+
 
     &--green {
         font-weight: $fw-bold;
@@ -23,6 +31,12 @@
         border-radius: 50%;
         text-align: center;
         color: nth($gray, 1);
+
+        @include mq(tablet) {
+            padding: 8px;
+        }
+
+
     }
 
 

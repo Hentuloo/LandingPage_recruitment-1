@@ -1,8 +1,6 @@
 .statistic {
     background-color: nth($green, 1);
     color: nth($white, 1);
-    padding: 30px;
-
     text-align: center;
 
     &__title {
@@ -11,16 +9,30 @@
         font-family: $font-first;
         font-weight: $fw-bold;
         margin-bottom: 15px;
+
+        @include mq(tablet) {
+            letter-spacing: 4px;
+            line-height: 25px;
+            font-size: map-get($fs, xs);
+        }
     }
 
     &__group {
         display: grid;
         margin: 10px auto;
+
+        @include mq(tablet) {
+            margin: 30px auto;
+        }
     }
 
     &__number {
         font-size: map-get($fs, xxxl);
         font-weight: $fw-medium;
+
+        @include mq(tablet) {
+            font-size: map-get($fs, xl);
+        }
     }
 
     &__paragraph {

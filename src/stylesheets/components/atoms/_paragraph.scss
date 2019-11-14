@@ -2,6 +2,10 @@
     font-family: $font-first;
     color: nth($black, 4);
 
+    @include mq(tablet) {
+        line-height: 27px;
+    }
+
     &--white {
         color: nth($white, 1);
     }

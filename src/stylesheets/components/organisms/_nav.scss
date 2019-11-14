@@ -12,6 +12,12 @@
   font-family: $font-first;
   color: nth($white, 1);
 
+  @include mq(tablet) {
+    min-height: 70px;
+    padding: 0px 25px;
+    box-sizing: border-box;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -37,6 +43,10 @@
     overflow: hidden;
     margin: 10px;
 
+    @include mq(tablet) {
+      width: auto;
+    }
+
     &-image {
       max-height: 100%;
     }
@@ -48,6 +58,7 @@
     color: nth($white, 1);
     cursor: pointer;
     z-index: 11;
+    line-height: 0px;
 
     &--white {
       color: nth($gray, 1);
@@ -100,6 +111,11 @@
     transition: transform 0.6s ease;
     z-index: 10;
 
+    @include mq(tablet) {
+      padding-top: 130px;
+      width: 60%;
+    }
+
     &--active {
       transform: translateX(0%);
     }
@@ -120,6 +136,10 @@
         opacity: 0;
         transform: translate(calc(-40% + 20px), -50%);
         transition: all 0.3s 0.4s linear;
+
+        @include mq(tablet) {
+          width: 60px
+        }
       }
 
       @at-root .nav__list--active .nav__list-element--active {
