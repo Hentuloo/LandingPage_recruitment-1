@@ -1,4 +1,8 @@
 .join {
+    @include mq(tablet) {
+        width: 75%;
+        margin: 65px 0px 0px 25px;
+    }
 
     &__title {}
 
@@ -11,5 +15,10 @@
 
     &__button {
         margin: 10px auto;
+
+        @include mq(tablet) {
+            margin: 25px 0px;
+            padding: 20px 85px;
+        }
     }
 }

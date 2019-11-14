@@ -5,17 +5,30 @@
     background-color: nth($white, 1);
 
     @include mq(tablet) {
-        padding: 240px 30px;
+        padding: 240px 30px 80px;
     }
 
     &__title {}
 
-    &__headline {}
+    &__headline {
+        @include mq(tablet) {
+            padding: 0px 70px;
+        }
+    }
 
-    &__groups {}
+    &__groups {
+        @include mq(tablet) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
 
     &__group {
         margin: 25px auto;
+
+        @include mq(tablet) {
+            flex-basis: 33.33%;
+        }
 
         &--active {
             .awards__hash {
@@ -30,10 +43,18 @@
         font-weight: $fw-bold;
         color: nth($black, 4);
         margin: 0px auto;
+
+        @include mq(tablet) {
+            max-width: 85%;
+        }
     }
 
     &__image-wrapper {
         margin: 5px 10px;
+
+        @include mq(tablet) {
+            height: 100px;
+        }
     }
 
     &__image {}
@@ -41,5 +62,11 @@
     &__hash {
         font-size: map-get($fs, xxxl);
         font-weight: $fw-medium;
+        color: nth($black, 2);
+
+        @include mq(tablet) {
+            display: block;
+            margin-bottom: 20px;
+        }
     }
 }

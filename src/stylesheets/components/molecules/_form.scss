@@ -3,12 +3,19 @@
     flex-direction: column;
     color: nth($black, 2);
 
+    @include mq(tablet) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px
+    }
+
     &__input {
         border: none;
         border-bottom: 1px solid nth($black, 5);
         padding: 11px 0px;
         margin: 7px 0px;
         font-family: $font-first;
+
 
         &::placeholder {
             color: nth($black, 2);
@@ -22,9 +29,20 @@
         border: 1px solid nth($black, 5);
         font-family: $font-first;
         margin: 7px;
+
+        @include mq(tablet) {
+            grid-column: 1/-1;
+            margin: 0px;
+        }
     }
 
     &__button {
         margin: 7px auto 15px;
+
+        @include mq(tablet) {
+            margin: 9px auto 45px;
+            padding: 16px 65px;
+        }
+
     }
 }

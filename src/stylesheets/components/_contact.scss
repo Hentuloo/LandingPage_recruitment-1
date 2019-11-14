@@ -1,21 +1,40 @@
 .contact {
     background-color: nth($white, 1);
 
+    @include mq(tablet) {
+        padding-top: 250px;
+        transform: translateY(-200px);
+        margin-bottom: -200px;
+    }
+
     &__image-wrapper {}
 
     &__image {
         display: block;
         max-width: 100%;
+
+        @include mq(tablet) {
+            max-width: 94%;
+            margin: 0px auto;
+        }
     }
 
     &__form-group {
         padding: 14px;
+
+        @include mq(tablet) {
+            padding: 40px;
+        }
     }
 
     &__title {}
 
     &__headline {
         margin-bottom: 30px;
+
+        @include mq(tablet) {
+            margin-bottom: 20px;
+        }
     }
 
     &__form {}

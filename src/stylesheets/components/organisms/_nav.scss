@@ -27,11 +27,19 @@
     z-index: -1;
     opacity: 0;
     transition: opacity 0.2s linear;
+
+    @include mq(tablet) {
+      transition: opacity 0.2s 0.35s linear;
+    }
   }
 
   &--scrolled {
     &::after {
       opacity: 1;
+
+      @include mq(tablet) {
+        transition: opacity 0.2s 0s linear;
+      }
     }
   }
 
@@ -42,9 +50,30 @@
     width: 30px;
     overflow: hidden;
     margin: 10px;
+    overflow: hidden;
 
     @include mq(tablet) {
       width: auto;
+      height: 38px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 0%;
+        left: 35px;
+        background-color: nth($blue, 1);
+        z-index: 1;
+        transform: translateX(400px);
+        transition: transform 0.8s ease;
+      }
+
+      @at-root .nav--scrolled .nav__logo {
+        &::after {
+          transform: translateX(0px);
+        }
+      }
     }
 
     &-image {
@@ -72,6 +101,10 @@
       font-size: 22px;
       background-color: transparent;
       color: inherit;
+
+      @include mq(tablet) {
+        font-size: 32px;
+      }
     }
   }
 
