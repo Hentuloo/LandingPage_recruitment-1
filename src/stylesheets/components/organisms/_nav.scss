@@ -11,11 +11,21 @@
   font-size: map-get($fs, xl);
   font-family: $font-first;
   color: nth($white, 1);
+  transform: translateY(10px);
+  transition: transform 0.6s ease-in-out;
 
   @include mq(tablet) {
     min-height: 70px;
     padding: 0px 25px;
     box-sizing: border-box;
+  }
+
+  @include mq(desktop) {
+    width: 90%;
+    max-width: 1100px;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    font-size: map-get($fs, xxs);
   }
 
   &::after {
@@ -26,20 +36,41 @@
     background-color: nth($blue, 1);
     z-index: -1;
     opacity: 0;
-    transition: opacity 0.2s linear;
+    transform: scaleY(1.4);
+    transition: opacity 0.2s linear, transform 0.2s linear;
+
 
     @include mq(tablet) {
-      transition: opacity 0.2s 0.35s linear;
+      transition: opacity 0.2s 0.35s linear, transform 0.2s linear;
+    }
+
+    @include mq(desktop) {
+      position: fixed;
+      left: 50%;
+      width: 100vw;
+      transform: translateX(-50%) scaleY(1.4);
     }
   }
 
   &--scrolled {
+    transform: translateY(0px);
+
+    @include mq(desktop) {
+      transform: translate(-50%, 0px) scaleY(1);
+    }
+
     &::after {
       opacity: 1;
+      transform: scaleY(1);
 
       @include mq(tablet) {
-        transition: opacity 0.2s 0s linear;
+        transition: opacity 0.2s 0s linear, transform 0.2s linear;
       }
+
+      @include mq(desktop) {
+        transform: translate(-50%, 0px) scaleY(1);
+      }
+
     }
   }
 
@@ -65,8 +96,12 @@
         left: 35px;
         background-color: nth($blue, 1);
         z-index: 1;
-        transform: translateX(400px);
+        transform: translateX(500px);
         transition: transform 0.8s ease;
+
+        @include mq(desktop) {
+          width: 80%;
+        }
       }
 
       @at-root .nav--scrolled .nav__logo {
@@ -88,6 +123,10 @@
     cursor: pointer;
     z-index: 11;
     line-height: 0px;
+
+    @include mq(desktop) {
+      display: none;
+    }
 
     &--white {
       color: nth($gray, 1);
@@ -114,13 +153,18 @@
       position: absolute;
       background-color: nth($black, 3);
       width: 100%;
-      height: 100vh;
+      height: calc(100vh + 10px);
       top: 0%;
       left: 0%;
       opacity: 0;
       transition: opacity 0.4s ease;
       visibility: hidden;
       z-index: 1;
+      transform: translateY(-10px);
+
+      @include mq(desktop) {
+        display: none;
+      }
     }
 
 
@@ -128,6 +172,10 @@
       &::after {
         visibility: visible;
         opacity: 1;
+
+        @include mq(desktop) {
+          display: none;
+        }
       }
     }
   }
@@ -140,7 +188,7 @@
     top: 0%;
     padding-top: 60px;
     background-color: nth($blue, 1);
-    transform: translateX(100%);
+    transform: translate(100%, -10px);
     transition: transform 0.6s ease;
     z-index: 10;
 
@@ -149,8 +197,23 @@
       width: 60%;
     }
 
+    @include mq(desktop) {
+      position: relative;
+      display: flex;
+      height: auto;
+      width: auto;
+      justify-content: flex-end;
+      padding-top: 0px;
+      transform: translateX(0px);
+      background-color: transparent;
+    }
+
     &--active {
-      transform: translateX(0%);
+      transform: translate(0%, -10px);
+
+      @include mq(desktop) {
+        transform: translate(0px);
+      }
     }
 
 
@@ -173,6 +236,10 @@
         @include mq(tablet) {
           width: 60px
         }
+
+        @include mq(desktop) {
+          display: none;
+        }
       }
 
       @at-root .nav__list--active .nav__list-element--active {
@@ -190,5 +257,9 @@
     padding-left: 60px;
     text-decoration: none;
     color: inherit;
+
+    @include mq(desktop) {
+      padding: 0px 20px;
+    }
   }
 }

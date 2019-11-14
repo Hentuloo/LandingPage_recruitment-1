@@ -23,6 +23,10 @@ body {
   @include mq(tablet) {
     font-size: 1.2rem;
   }
+
+  @include mq(desktop) {
+    font-size: 1.4rem;
+  }
 }
 
 //import all components
