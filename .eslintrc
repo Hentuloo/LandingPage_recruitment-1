@@ -1,10 +1,18 @@
 {
-  "extends": ["eslint:recommended", "airbnb", "prettier"],
-  "globals": {
-    "document": true,
-    "window": true
-  },
-  "rules": {
-    "no-new": 0
-  }
+   "extends": [
+      "eslint:recommended",
+      "airbnb",
+      "prettier",
+      "prettier/babel"
+   ],
+   "plugins": ["babel"],
+   "globals": {
+      "document": true,
+      "window": true
+   },
+   "parser": "babel-eslint",
+   "rules": {
+      "no-new": 0,
+      "no-unused-expressions": 0
+   }
 }
