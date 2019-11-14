@@ -4,6 +4,16 @@
         margin: 65px 0px 0px 25px;
     }
 
+    @include mq(desktop) {
+        max-width: 45vw;
+        margin: 110px auto 210px;
+        transform: translateX(-55%);
+    }
+
+    @include mq(large) {
+        max-width: 600px;
+    }
+
     &__title {}
 
     &__headline {}

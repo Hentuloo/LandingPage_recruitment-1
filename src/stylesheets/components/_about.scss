@@ -5,11 +5,21 @@
         margin-bottom: -200px;
     }
 
+    @include mq(desktop) {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0px auto 60px;
+  }
+
     &__information {
         @include mq(tablet) {
             width: 70%;
             padding: 40px 30px;
             margin: 70px 0px 0px 15px;
+        }
+
+        @include mq(desktop) {
+            left: 10px;
         }
     }
 
@@ -38,6 +48,14 @@
             width: 80%;
             margin-left: 40px;
         }
+
+        @include mq(desktop) {
+            position: absolute;
+            margin: 0px;
+            max-width: 700px;
+            top: 120px;
+            right: 10px;
+        }
     }
 
     &__image {
@@ -53,8 +71,25 @@
             position: absolute;
             top: 150px;
             right: 2%;
-            padding: 70px 10px 70px 40px;
+            padding: 70px 10px 10px 40px;
             box-sizing: border-box;
+        }
+
+        @include mq(desktop) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 40px auto;
+            width: 500px;
+            top: auto;
+            right: 0px;
+            left: 100px;
+            bottom: 0%;
+            padding: 60px 0px 10px;
+            transform: translateY(100%);
+
+            .statistic__title {
+                grid-column: 1/-1;
+            }
         }
     }
 }

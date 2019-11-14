@@ -33,10 +33,19 @@
         @include mq(tablet) {
             font-size: map-get($fs, xl);
         }
+
+        @include mq(desktop) {
+            font-size: map-get($fs, xxl);
+            font-weight: $fw-regular;
+        }
     }
 
     &__paragraph {
         font-family: $font-first;
         font-weight: $fw-bold;
+
+        @include mq(desktop) {
+            font-weight: $fw-medium;
+        }
     }
 }

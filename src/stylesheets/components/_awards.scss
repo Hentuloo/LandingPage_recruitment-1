@@ -8,11 +8,21 @@
         padding: 240px 30px 80px;
     }
 
+    @include mq(desktop) {
+        padding: 310px 30px 80px;
+    }
+
     &__title {}
 
     &__headline {
         @include mq(tablet) {
             padding: 0px 70px;
+        }
+
+        @include mq(desktop) {
+            display: block;
+            max-width: 500px;
+            margin: 0px auto;
         }
     }
 
@@ -21,13 +31,18 @@
             display: flex;
             flex-wrap: wrap;
         }
+
+        @include mq(desktop) {
+            max-width: 1150px;
+            margin: 0px auto 40px;
+        }
     }
 
     &__group {
         margin: 25px auto;
 
         @include mq(tablet) {
-            flex-basis: 33.33%;
+            flex-basis: 20%;
         }
 
         &--active {

@@ -9,6 +9,12 @@
     z-index: 5;
 
     @include mq(tablet) {
+        padding: 25px;
         text-align: left;
+    }
+
+    @include mq(desktop) {
+        max-width: 600px;
+        padding: 55px;
     }
 }

@@ -14,7 +14,25 @@
         z-index: 3;
     }
 
-    &__paragraph {}
+    @include mq(desktop) {
+        max-width: 55vw;
+        margin: -280px 0px 0px 0px;
+        padding: 40px 30px 30px 120px;
+        transform: translate(80%, -300px);
+    }
+
+    @include mq(large) {
+        max-width: 690px;
+        padding: 40px 30px 30px 160px;
+        margin: -280px auto 0px;
+        transform: translate(36%, -300px);
+    }
+
+    &__paragraph {
+        @include mq(desktop) {
+            font-size: map-get($fs, xxs);
+        }
+    }
 
     &__quote-icon {
         position: absolute;
@@ -31,18 +49,32 @@
             font-size: 40px;
             color: nth($white, 3);
         }
+
+        @include mq(desktop) {
+            right: 10px;
+            top: 45px;
+        }
+
+        @include mq(large) {
+            left: 85px;
+        }
     }
 
     &__person {
         display: grid;
         grid-template-columns: 48px 1fr;
         grid-template-rows: auto auto;
-        margin: 25px auto 20px
+        margin: 25px auto 20px;
+
+        @include mq(desktop) {
+            grid-template-columns: 64px 1fr;
+        }
     }
 
     &__imge-wrapper {
         grid-row: 1/-1;
         grid-column: 1;
+
     }
 
     &__image {
@@ -63,5 +95,6 @@
         grid-column: 2;
         padding-left: 10px;
         font-family: $font-first;
+        margin-top: 6px;
     }
 }
