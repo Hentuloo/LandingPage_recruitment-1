@@ -56,7 +56,7 @@ class Navigation {
          const y =
             section.getBoundingClientRect().top +
             window.pageYOffset -
-            52;
+            150;
 
          window.scrollTo({
             top: y,
