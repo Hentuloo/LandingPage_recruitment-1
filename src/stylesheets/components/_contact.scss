@@ -7,15 +7,47 @@
         margin-bottom: -200px;
     }
 
-    &__image-wrapper {}
+    @include mq(desktop) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0px auto;
+        padding: 70px 40px 60px;
+        transform: unset;
+
+    }
+
+    &__imge-wrapper {
+        @include mq(tablet) {
+            height: 400px;
+            overflow: hidden;
+        }
+
+        @include mq(desktop) {
+            position: relative;
+            width: 420px;
+            justify-self: flex-end;
+            margin-right: 40px;
+            overflow: hidden;
+        }
+    }
 
     &__image {
         display: block;
         max-width: 100%;
 
+
         @include mq(tablet) {
             max-width: 94%;
             margin: 0px auto;
+            transform: translateY(-70px);
+        }
+
+        @include mq(desktop) {
+            position: absolute;
+            width: 500px;
+            max-width: none;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 
@@ -24,6 +56,13 @@
 
         @include mq(tablet) {
             padding: 40px;
+        }
+
+        @include mq(desktop) {
+            width: 100%;
+            max-width: 550px;
+            padding: 0px;
+            justify-self: flex-start;
         }
     }
 
@@ -37,5 +76,12 @@
         }
     }
 
-    &__form {}
+    &__form {
+        @include mq(desktop) {
+            .form__button {
+                grid-column: 1/-1;
+                margin: 7px 0px;
+            }
+        }
+    }
 }

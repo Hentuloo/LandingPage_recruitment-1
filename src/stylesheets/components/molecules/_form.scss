@@ -38,11 +38,12 @@
 
     &__button {
         margin: 7px auto 15px;
+        justify-self: start;
+
 
         @include mq(tablet) {
             margin: 9px auto 45px;
             padding: 16px 65px;
         }
-
     }
 }
