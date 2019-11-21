@@ -4,7 +4,8 @@
     justify-content: center;
     align-items: center;
     font-family: $font-first;
-    font-weight: $fw-medium;
-    background-color: nth($blue, 1);
+    font-weight: $fw-bold;
+    letter-spacing: 3px;
+    background-color: nth($green, 2);
     color: nth($white, 1)
 }

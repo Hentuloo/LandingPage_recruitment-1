@@ -17,6 +17,7 @@
    color: nth($white, 1);
    box-sizing: border-box;
 
+
    @include mq(tablet) {
       padding-top: 24vh;
    }
@@ -28,6 +29,9 @@
       left: 0%;
       top: 0%;
       z-index: -1;
+      background-color: nth($black, 1);
+      overflow: hidden;
+
 
       &-image {
          position: absolute;
@@ -35,6 +39,7 @@
          left: 50%;
          top: 50%;
          transform: translate(-50%, -50%);
+         opacity: 0.3;
 
          @include mq(mobileLandscape) {
             max-height: none;

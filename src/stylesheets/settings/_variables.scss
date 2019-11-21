@@ -1,5 +1,4 @@
-$fs: (
-   xxs: 1.2em,
+$fs: (xxs: 1.2em,
    xs: 1.4em,
    s: 1.5em,
    m: 1.8em,
@@ -13,36 +12,28 @@ $fw-bold: 700;
 $fw-medium: 500;
 $fw-regular: 400;
 
-$breakPoints: (
-   mobile: '(min-width: 460px)',
-   mobileLandscape:
-      '(max-width: 1024px) and (orientation: landscape)',
+$breakPoints: (mobile: '(min-width: 460px)',
+   mobileLandscape: '(max-width: 1024px) and (orientation: landscape)',
    tablet: '(min-width: 670px)',
    desktop: '(min-width:1024px)',
    large: '(min-width:1240px)',
    xlarge: '(min-width:1400px)',
 );
 //base-colors
-$white: (
-   rgb(255, 255, 255),
+$white: (rgb(255, 255, 255),
    rgba(255, 255, 255, 0.15),
-   rgba(255, 255, 255, 0.5)
-);
-$black: (
-   rgb(0, 0, 0),
+   rgba(255, 255, 255, 0.5));
+$black: (rgb(0, 0, 0),
    rgba(0, 0, 0, 0.5),
    rgba(0, 0, 0, 0.7),
    rgba(0, 0, 0, 0.8),
-   rgba(150, 37, 37, 0.24)
-);
+   rgba(150, 37, 37, 0.24));
 
-$green: (rgba(63, 174, 73, 1));
-$blue: (rgba(30, 48, 102, 1), rgba(30, 48, 102, 1));
-$gray: (
-   rgba(255, 255, 255, 0.7),
+$green: (rgb(97, 146, 111), rgb(53, 69, 70), rgb(97, 146, 111), rgb(115, 204, 52));
+$blue: (rgb(155, 212, 215), rgb(183, 235, 240), rgba(30, 48, 102, 1));
+$gray: (rgba(255, 255, 255, 0.7),
    rgb(242, 242, 242),
-   rgba(245, 245, 245, 1)
-);
+   rgba(245, 245, 245, 1));
 
 $font-first: 'Raleway';
 $font-second: 'Millunium Medium';

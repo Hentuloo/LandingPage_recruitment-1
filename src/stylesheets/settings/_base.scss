@@ -1,0 +1,22 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: $font-second;
+    font-weight: $fw-bold;
+    font-size: 1rem;
+    background-color: nth($gray, 2);
+
+    @include mq(tablet) {
+        font-size: 1.2rem;
+    }
+
+    @include mq(desktop) {
+        font-size: 1.4rem;
+    }
+}
